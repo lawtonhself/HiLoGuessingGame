@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author lawto
+ *
+ */
+module HiLoGuessingGame {
+}
