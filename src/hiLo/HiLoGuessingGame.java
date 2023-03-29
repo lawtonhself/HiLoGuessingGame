@@ -38,10 +38,13 @@ public class HiLoGuessingGame {
 					System.out.println(guess + " is the number. Great job");
 				}	
 			}
+			//asks user if they want to play again and if yes will loop back though
 			System.out.println("Would you like to play again (y/n)?");
 			playAgain = scan.next();	
 		} while (playAgain.equalsIgnoreCase("y"));
+		//if answer to playing again is no, it wont loop back
 		System.out.println("Thank you for playing! Goodbye.");
+		//closes the "scan" scanner
 		scan.close();
 
 	}
