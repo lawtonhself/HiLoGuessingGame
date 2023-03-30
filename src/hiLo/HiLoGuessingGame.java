@@ -13,19 +13,23 @@ public class HiLoGuessingGame {
 
 		//do while loop for the ability to play the game again
 		do {
-			//creates a random number between 1 and 100
-			int theNumber = (int)(Math.random() * 100 + 1);
-
+			//creates a random number between -1000000 and 1000000
+			int theNumber = (int)(Math.random() * 2000000 - 1000000);
+			
 			//creates a variable "guess" to be used for users input
 			int guess = 0;
+			
+			//creates a variable "count" that makes a count of how many guesses it took to guess the number
+			int count = 0;
 
 			//asks user to guess a number
-			System.out.println("Guess a number between 1 and 100");
+			System.out.println("Guess a number between -1,000,000 and 1,000,000");
 
 			//while loop to keep guessing until "theNumber" variable has been guessed
 			while (guess != theNumber) {
 				//assigns the users next input to "guess" variable
 				guess = scan.nextInt();
+				count+=1;
 
 				//If statement to tell user that there number is (1)to low (2)Too high or (3)Just right 
 				if(guess < theNumber) {
@@ -35,7 +39,7 @@ public class HiLoGuessingGame {
 					System.out.println(guess + " is too high. Try again");
 				}
 				else {
-					System.out.println(guess + " is the number. Great job");
+					System.out.println(guess + " is the number.It took you " + count + " tries. Great job");
 				}	
 			}
 			//asks user if they want to play again and if yes will loop back though
