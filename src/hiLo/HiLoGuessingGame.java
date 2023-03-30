@@ -1,4 +1,3 @@
-//35
 package hiLo;
 import java.util.Scanner;
 
